@@ -1,0 +1,167 @@
+.portfolio {
+  position: relative;
+  background-color: #f2f4f7;
+  @media (min-width: 992px) {
+    padding-top: $padding-default * 4;
+  }
+  &__buttons {
+    position: relative;
+  }
+  &__text {
+    margin-top: $padding-default;
+    padding: 0 $padding-default;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+  &__btn-prev.btn-arrow-left,
+  &__btn-next.btn-arrow-left {
+    padding-top: 0;
+    position: absolute;
+    top: 30%;
+    cursor: pointer;
+    z-index: 2;
+  }
+  &__btn-prev {
+    display: none;
+    right: $padding-default * 3;
+  }
+  &__btn-next {
+    left: auto;
+    right: $padding-default;
+    transform: rotate(180deg);
+  }
+
+  .slider {
+    position: relative;
+    &__img-list {
+      padding: $padding-default;
+      display: grid;
+      gap: $padding-default/2;
+      grid-template-columns: repeat(20, 1fr);
+      font-size: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    &__img-item {
+      width: $portfolio-swiper-img-width;
+      object-fit: cover;
+      cursor: pointer;
+      @media (min-width: 992px) {
+        width: $portfolio-swiper-img-width-lg;
+      }
+    }
+
+    &__scrollbar {
+      margin: 0;
+      padding: 0 $padding-default;
+      display: flex;
+      align-items: center;
+      height: 2.4rem;
+      width: 100%;
+    }
+
+    &__scrollbar:hover .scrollbar-track {
+      height: 2px;
+    }
+
+    &__scrollbar-track {
+      position: relative;
+      height: 2px;
+      width: 100%;
+      background-color: #ccc;
+      border-radius: 4px;
+    }
+
+    &__scrollbar-thumb {
+      position: absolute;
+      height: 100%;
+      width: 20%;
+      background-color: #000;
+      border-radius: inherit;
+      cursor: grab;
+      @media (min-width: 992px) {
+        width: 50%;
+      }
+    }
+
+    &__scrollbar-thumb:active {
+      cursor: grabbing;
+      height: 2px;
+      top: -1px;
+    }
+
+    &__scrollbar-thumb::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -10px;
+      bottom: -10px;
+    }
+  }
+
+  .modal {
+    display: none;
+    &.active {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 6;
+    }
+    &__wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 800px;
+      height: 100%;
+      max-height: 1100px;
+      @media (orientation: portrait) and (min-width: 576px) {
+        padding-top: 10px;
+        height: 100%;
+        width: 80%;
+      }
+      @media (orientation: landscape) {
+        padding-top: 10px;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    &__img {
+      height: auto;
+      width: 100%;
+      border: 4px solid #fff;
+      border-radius: 6px;
+      background-position: center;
+      background-size: contain;
+      cursor: default;
+      @media (orientation: portrait) and (min-width: 576px) {
+        height: auto;
+        width: 100%;
+      }
+      @media (orientation: landscape) {
+        height: calc(100% - 60px);
+        max-height: 1100px;
+        width: auto;
+      }
+    }
+    &__btn-prev,
+    &__btn-next {
+      padding: 0 $padding-default;
+      font-size: 4rem;
+      color: #fff;
+      text-shadow: 0 0 3px #000;
+      cursor: pointer;
+    }
+  }
+}
