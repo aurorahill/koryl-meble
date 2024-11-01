@@ -1,0 +1,11 @@
+.footer {
+  &__wrapper {
+    padding: $padding-default/2 $padding-default;
+    width: 100%;
+    p {
+      margin-bottom: 0;
+      font-size: 1.4rem;
+      font-weight: 200;
+    }
+  }
+}

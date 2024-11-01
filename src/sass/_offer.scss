@@ -1,0 +1,79 @@
+.offer {
+  &__wrapper.container-fluid {
+    padding: $padding-default;
+  }
+  &__heading {
+    margin-bottom: $padding-default;
+    font-family: $big-font;
+    font-size: 3rem;
+    font-weight: 600;
+    color: white;
+    @media (min-width: 576px) {
+      font-size: 5.5vw;
+    }
+    span {
+      color: $blue-color;
+    }
+  }
+  &__contact-buttons.contact-buttons {
+    padding-bottom: $padding-default;
+    @media (min-width: 992px) {
+      padding-bottom: $padding-default * 2;
+    }
+    @media (min-width: 992px) {
+      padding-bottom: $padding-default * 2;
+    }
+    .contact-button {
+      font-weight: 300;
+    }
+    a {
+      color: #fff;
+    }
+  }
+  .accordion-button {
+    padding: 2rem;
+    padding-left: 0.5rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    --bs-accordion-btn-color: white;
+    --bs-accordion-btn-bg: #212529;
+    --bs-accordion-btn-focus-box-shadow: 0 0 3px 1px #6a969b;
+    --bs-accordion-active-color: black;
+    --bs-accordion-active-bg: rgb(242, 244, 247);
+    z-index: 1;
+    @media (min-width: 992px) {
+      padding: 2.5rem;
+    }
+    @media (min-width: 1200px) {
+      padding: 3rem;
+      font-size: 2rem;
+    }
+  }
+  .accordion-button::after {
+    background: url('../images/arrow-long-right.svg') no-repeat 0;
+    background-size: 100% auto;
+    border: 0;
+    display: inline-block;
+    height: 12px;
+    padding-top: $padding-default;
+    width: 40px;
+  }
+
+  .accordion-body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    padding: 2rem;
+    padding-left: 0.5rem;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: white;
+    background-color: #212529;
+    @media (min-width: 992px) {
+      padding: 2.5rem;
+    }
+    @media (min-width: 1200px) {
+      padding: 3rem;
+      font-size: 2rem;
+    }
+  }
+}

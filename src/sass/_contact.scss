@@ -1,0 +1,61 @@
+.contact {
+  padding: 0;
+  &__wrapper {
+    padding: $padding-default $padding-default;
+    width: 100%;
+  }
+  &__logo {
+    padding: $padding-default * 2 0;
+    & img {
+      @media (min-width: 992px) {
+        width: 300px;
+      }
+    }
+  }
+  &__item a {
+    display: block;
+    margin: 1rem 0;
+    text-align: left;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #fff;
+    &:hover i {
+      background-color: transparent;
+      background-color: $blue-color;
+    }
+    i {
+      margin-right: $padding-default/3;
+      display: inline-block;
+      text-align: center;
+      line-height: 38px;
+      width: 60px;
+      height: 40px;
+      border: 2px solid $blue-color;
+      border-radius: 20px;
+      font-size: 1.8rem;
+      transition: background-color 0.2s ease-in-out;
+      @media (min-width: 992px) {
+        margin-right: $padding-default/3;
+      }
+    }
+  }
+  &__social-item a {
+    display: block;
+    margin-top: 4rem;
+    display: inline-block;
+    text-align: center;
+    line-height: 59px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid $blue-color;
+    border-radius: 50%;
+    font-size: 3rem;
+    background-color: $blue-color;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.2s ease-in-out;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

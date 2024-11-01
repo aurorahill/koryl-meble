@@ -1,0 +1,130 @@
+@import '~bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import './variables';
+@import './nav';
+@import './intro';
+@import './portfolio';
+@import './aboutus';
+@import './_offer';
+@import './backgroung-image';
+@import './_contact';
+@import './_footer';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  font-family: $small-font;
+  user-select: none;
+}
+
+section {
+  padding: $padding-default 0;
+  @media (min-width: 992px) {
+    padding: $padding-default * 2 0;
+  }
+  .container-fluid {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1800px;
+  }
+  .contact-buttons {
+    a {
+      margin-right: $padding-default/3;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid $blue-color;
+      border-radius: 50%;
+      font-size: 1.8rem;
+      color: #000;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.2s ease-in-out;
+      @media (min-width: 768px) {
+        a {
+          margin-right: $padding-default/2;
+          font-size: 1.6rem;
+        }
+      }
+      &:last-of-type {
+        font-size: 1.4rem;
+        border-radius: 25px;
+        i {
+          padding-left: 7px;
+        }
+      }
+      &:hover {
+        background-color: $blue-color;
+        color: white;
+      }
+    }
+  }
+}
+.btn-arrow-left {
+  background: url('../images/arrow-long-left.svg') no-repeat 0;
+  background-size: 100% auto;
+  border: 0;
+  display: inline-block;
+  height: 12px;
+  padding-top: 1.5 * $padding-default;
+  width: 45px;
+  @media (min-width: 576px) {
+    padding-top: $padding-default * 2;
+  }
+}
+
+.linear {
+  top: $pt-compensate-navbar;
+  left: 0;
+  width: 100%;
+  height: 31px;
+  background-color: $blue-color;
+  z-index: 2;
+  &__scroll {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  &__text-wrap {
+    white-space: nowrap;
+    animation: animate 30s linear infinite;
+  }
+  &__text {
+    display: inline-flex;
+    padding: 0 2rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 31px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    @media (min-width: 992px) {
+      padding: 0 3rem;
+    }
+    @media (min-width: 1400px) {
+      padding: 0 3.5rem;
+    }
+  }
+}
+@keyframes animate {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
