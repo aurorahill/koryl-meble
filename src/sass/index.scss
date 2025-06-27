@@ -1,14 +1,15 @@
-@import '~bootstrap/scss/bootstrap';
+@use '~bootstrap/scss/bootstrap';
+
+@use'./variables' as *;
+@use './nav';
+@use './intro';
+@use './portfolio';
+@use './aboutus';
+@use './_offer';
+@use './backgroung-image';
+@use './_contact';
+@use './_footer';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
-@import './variables';
-@import './nav';
-@import './intro';
-@import './portfolio';
-@import './aboutus';
-@import './_offer';
-@import './backgroung-image';
-@import './_contact';
-@import './_footer';
 
 * {
   margin: 0;

@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 .aboutus {
   padding-bottom: $padding-default * 2;
   font-family: $big-font;
